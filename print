@@ -1,0 +1,49 @@
+print("Hi, this is my first python code")
+# This is a comment 
+
+# =========================================
+# PRINT FUNCTION AND ESCAPE SEQUENCE
+# =========================================
+# --------------------
+# \" Double Quote
+# --------------------
+print("Hi \"Python\"")
+print ( 'Hi "Python"')
+
+# --------------------
+# \" Single Quote
+# --------------------
+print("Hi \'Python\'")
+
+# --------------------
+# \\ Backslash
+# --------------------
+# When we have a slash in the text, we need to add one before to
+# tell python that it is include in the text
+print("Path: C:\\Users\\Mehinewe")
+
+# --------------------
+# \n New Line
+# --------------------
+print("Message1\nMessage2")
+print("Message1\n\n\nMessage2\n")
+
+# --------------------
+# \t Tab (Space)
+# --------------------
+print("Message1\tMessage2\n")
+
+# --------------------
+# \b Backspace
+# --------------------
+print("Message1\bMessage2\n")
+
+
+#Challenge
+# --------------------
+# """ Triple Quotes : To allows the code to have multiple lines
+# --------------------
+print("""My Learning Path:
+      \t-Python Basics
+      \t-Data Engineering
+      \t-AI""")

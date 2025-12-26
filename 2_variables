@@ -1,0 +1,30 @@
+# =========================================
+# VARIABLES
+# =========================================
+# A variable is a name you create to store a value, so you can use it later in you code 
+# We use it to avoid repetion and make the code easier
+# We can Update Variables anytime
+
+
+print("My name is Mehinewe")
+print("Mehinewe is learning Python")
+print("Mehinewe wants to become Python expert\n")
+
+ # Assigning a value to a variable 
+name = "Merveille" 
+language = "Python"
+
+ # Add variables to the text to make the text Dynamic
+print("My name is", name)
+print(name, "is learning",language)
+print(name, " wants to become", language, "expert")
+
+# CHALLENGE
+# Print the following text
+# Add a variable to make it Dynamic
+# info@mehinewedata.com\nsupport@mehinewedata.com\nwww.mehinewedata.com
+
+suffix= "mehinewedata.com"
+
+print(f"info@{suffix}\nsupport@{suffix}\nwww.{suffix}")
+

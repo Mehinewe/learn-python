@@ -1,0 +1,61 @@
+# ========================================
+# DATA TYPES
+# ========================================
+
+#-----------------------------------------
+# None
+# - means "no value", "nothing" or "unknown"
+# - it is used to show the absence of any data
+#-----------------------------------------
+
+#-----------------------------------------
+# SINGLE VALUE : PRIMITIVE TYPES
+# - int = integer (whole numbers whithout decimal)
+# - float = (decimal numbers)
+# - str = string(text or a sequece of characters
+#                It is written inside single or double quotes)
+# - bool = boolean (can be true/false
+#                   the are used to handle logic and decision making)
+#                   always Start with capital letter
+
+a = 96          #int
+b = 3.14        #float
+c = "Hello"     #str
+d = 'hi'        #str
+e = "524785"    #str
+f = True        #bool
+g = False       #bool
+h = None        #NoneType
+i = ""          #str - blank
+j = " "         #str - Empty
+#-----------------------------------------
+
+#-----------------------------------------
+# MULTI VALUES: DATA STRUCTURES, COLLECTIONS, CONTAINERS
+# - list [1, 2, 3]
+# - set {1, 2}
+# - tuple ('a', 'b', 'c')
+# - dictionnary {'a':1, 'b':2, 'c':3}
+#-----------------------------------------
+
+
+
+# ========================================
+# FUNCTIONS : independent block of code
+# ========================================
+
+#-----------------------------------------
+# Syntax : function_name(value)
+# Ex: 
+print("hello")
+type(30)
+
+
+# ========================================
+# METHODS : functions belong to objects/classes
+# ========================================
+
+#-----------------------------------------
+# Syntax : value.method_name()
+# Ex: 
+'hello'.upper()

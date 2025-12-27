@@ -1,12 +1,17 @@
 # Excercice 1
-name = input("Enter Your Name")
-age = input("How Old are You?")
-country = input("Where do you live?")
-product = input("Which Product did you purchase?")
+name = input("Enter Your Name ")
+age = input("How Old are You? ")
+country = input("Where do you live? ")
+product = input("Which Product did you purchase? ")
 
-print(f"""Customer Summary: 
+
+print(f"""
+      Customer Summary
+      -------------------
       Name: {name}
       Age: {age}
       Country: {country}
       Product Purchased: {product}
       """)
+
+print("Thank you! Your informations has been recorded.")

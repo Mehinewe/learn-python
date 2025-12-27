@@ -1,0 +1,11 @@
+# =========================================
+# INPUT()
+# =========================================
+# Input() makes the program Interactive
+# It lets the program ask questions and
+# reat to what the user types.
+# It is often use in applications
+
+name = input("Enter Your Name:")
+country = "United States"
+print(name, "comes from", country)

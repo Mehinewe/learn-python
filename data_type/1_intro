@@ -17,6 +17,9 @@
 # - bool = boolean (can be true/false
 #                   the are used to handle logic and decision making)
 #                   always Start with capital letter
+# - date & time : * date
+                  * time
+                  * datetime
 
 a = 96          #int
 b = 3.14        #float
@@ -59,3 +62,12 @@ type(30)
 # Syntax : value.method_name()
 # Ex: 
 'hello'.upper()
+
+text = "hello"
+number = 10
+print(text)
+print(type(number))
+print(len(text))
+print(text.upper())
+print(number.bit_length())
+

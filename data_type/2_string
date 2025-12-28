@@ -1,0 +1,95 @@
+#---------------------------------------------------------
+# # Types
+#---------------------------------------------------------
+name = "Mehinewe"
+print(type(name))
+
+age = 52
+print(type(age))
+
+# str(value): converts any value into string value
+print("Your Age is: " + str(age))
+
+#---------------------------------------------------------
+# Math
+#---------------------------------------------------------
+password = "123a121235"
+# len(): returns the number of items in a value
+# returne the number of charaters in a string
+print(len(password))
+
+if len(password) < 8:
+    print("Your Password is too short!")
+
+text = """
+Python is easy to learn
+Python is powerful
+Many people love python
+"""
+
+# count(substring): returns how often a word appears in the string
+# Use case - detect quality issues
+print(text.count("Python"))
+
+#---------------------------------------------------------
+# Transformations
+#---------------------------------------------------------
+# replace("old value", "New value")
+# Use case - Clean Numeric Formats
+price = "5214,25"
+print(price.replace(",", "."))
+# Output: 5214.25
+
+phone = "125/5588/555"
+print(phone.replace("/", "")) # replace / with nothing
+# Output: 1255588555
+
+price = "$25,662.99"
+print(price.replace("$", "").replace(",", "")) # two replace
+# Output: 25662.99
+
+#-----------
+# CHALLENGE
+#-----------
+"""
+Convert the messy phone number into a clean number
+format with only digits "+49 (176) 158-5478"
+"""
+phone = "+49 (176) 158-5478"
+print(phone.replace("+", "00").replace(" ", "").replace("(", "").replace(")", "").replace("-", ""))
+
+# + : 'string' + 'string' (join or concatinates two  strings into one)
+first_name = "Mehinewe"
+last_name = "Ked"
+name = first_name + " " + last_name
+print(name)
+# Output: Mehinewe Ked
+
+# Use case -  build dynamic paths using forder and file variables
+folder = "C:/Users/Mehinewe"
+file = "report.csv"
+full_file_path = folder + "/" + file
+print(full_file_path)
+# Output: C:/Users/Mehinewe/report.csv
+
+# f-string: allows to easly out variables and expressions directly inside string value
+name = "Ben"
+age = 58
+is_student = False
+print(f"My name is {name}, I am {age} years old and student status is {is_student}")
+# Output: My name is Ben, I am 58 years old and student status is False
+
+# split(separator) : breaks a sting into smaller parts
+# Use case - separate date and time
+stamp = "2026-09-20 14:30"
+print(stamp.split(" ")) # date and time
+# Output: ['2026-09-20', '14:30']
+
+stamp = "2026-09-20"
+print(stamp.split("-")) # year ,month and day
+# Output: ['2026', '09', '20'] 
+
+# Use case - break comma-separated values into individual items
+csv_file = "2254,Ben,USA,1957-09-15"
+print(csv_file.split(","))
+# Output: ['2254', 'Ben', 'USA', '1957-09-15']

@@ -71,3 +71,43 @@ print(len(text))
 print(text.upper())
 print(number.bit_length())
 
+
+#==================================================
+CHALLENGE
+#==================================================
+""" 
+Create 5 variables - each with a different data type :
+1. Your age
+2. Your height (decimal)
+3. Your name
+4. Are ypu a student?
+5. Something with no value yet
+Ten print the values, data types, lengths 
+of all variables
+"""
+
+# create variables
+age = 50
+height = 5.14
+name = input("What is your name: ")
+status = input("Are ypu a student? (True or False): ")
+gender = None
+
+# print values
+print(f"Hi, My name is {name}")
+print(f"I am {age} years old")
+print(f"My height is {height} inches")
+print(f"I am a student: {status}")
+print(gender)
+
+# print data types
+print(type(age))
+print(type(height))
+print(type(name))
+print(type(status))
+print(type(gender))
+
+# print lengths
+print(len(name))
+print(len(status))
+

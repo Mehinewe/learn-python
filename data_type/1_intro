@@ -80,7 +80,7 @@ Create 5 variables - each with a different data type :
 1. Your age
 2. Your height (decimal)
 3. Your name
-4. Are ypu a student?
+4. Are you a student?
 5. Something with no value yet
 Ten print the values, data types, lengths 
 of all variables

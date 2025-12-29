@@ -93,3 +93,128 @@ print(stamp.split("-")) # year ,month and day
 csv_file = "2254,Ben,USA,1957-09-15"
 print(csv_file.split(","))
 # Output: ['2254', 'Ben', 'USA', '1957-09-15']
+
+# *: repeat the string multiple times
+print("ha" * 3)
+# Output: hahaha
+
+# indexing ( one character) & Slicing ( multiple characters)
+# index: 'string'.[index] : extracts one character by position
+#We have positive index which start with 0 from left to right and the negative
+# with -1 from right to left
+
+text = "Python"
+
+# Extract the first character
+print(text[0])
+# or
+print(text[-6])
+# Output: P
+
+# Extract the last character
+print(text[5])
+# or
+print(text[-1])
+# Output: n
+
+# Extract h
+print(text[3])
+#  or
+print(text[-3])
+# Output: h
+
+
+# Slicing : extract a part of the string
+# 'string'[sart:end"step]
+date = "2026-08-18"
+# Extratct the Year
+print(date[0 : 4])
+
+# If you leave the strat index empty, Python starts from index 0
+print(date[: 4])
+
+# Extract the month
+print(date[5 : 7])
+
+
+# Extract the day
+print(date[-2 :])
+
+
+
+#---------------------------------------------------------
+# Cleaning
+#---------------------------------------------------------
+# Remove Spaces
+# lstrip(): remove space from the left side
+# rstrip(): remove space from the right side
+# strip(): remove space from the both ends
+# We usually use strip() with input() because we don't know where
+# users are going to add extra spaces
+
+# Whitespace Cleanup
+text = " Engineering".lstrip()
+print(text)
+
+text = "Engineering ".rstrip()
+print(text)
+
+text = " Engineering ".strip()
+print(text)
+
+# It can also remove any characters you want from the start and end - not just spaces
+text = "###BSFBJ###".strip("#")
+print(text)
+# Output: BSFBJ
+
+# Use Case - Detect Extra Spaces
+# Check the length before and after strip() to find unwanted spaces
+text = " Engineering"
+print(len(text))  # 12
+print(len(text.strip()))    # 11
+
+nr_of_spaces = len(text) - len(text.strip())  # 1
+is_clean = len(text) == len(text.strip())     #False
+print("Number of Spaces:", nr_of_spaces) 
+print("Is my data clean?", is_clean) 
+# Output:   Number of Spaces: 1
+#           Is the data clean? False
+
+# Clean Cases
+# lower()
+# upper()
+# Use Case - Standardize Text Case
+text = "python PROGRAMMING"
+print(text.lower())
+# Output: python programming
+print(text.upper())
+# Output: PYTHON PROGRAMMING
+
+# Use Case - Clean Data for Matching : prevent case-based mismarches during search or comparison
+search = "Email ".lower().strip()
+data = " emAil".lower().strip()
+
+print(search == data)
+
+
+#-----------
+# CHALLENGE
+#-----------
+"""
+Turn the messy string into a single clean summary 
+with name, role and age
+"968-Mehinewe, ( D@T@ Engineer );; 27y  "
+"""
+
+string = "968-Mehinewe, ( D@T@ Engineer );; 27y  ".strip()
+name = string[4 : 12].lower()
+role = string[16 : 29].replace("@", "a").lower()
+age = string[-3 : -1]
+
+print(f"name: {name} | role: {role} | age: {age}")
+# Output : name: mehinewe | role: data engineer | age: 27
+
+
+#---------------------------------------------------------
+# Search
+#---------------------------------------------------------

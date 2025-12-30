@@ -218,3 +218,63 @@ print(f"name: {name} | role: {role} | age: {age}")
 #---------------------------------------------------------
 # Search
 #---------------------------------------------------------
+# startswith(substring): checks if the string starts with a specific word
+# endswith(substring): checks if the string ends with a specific word
+# 'substring' in 'string': checks if a word exists in the string
+# find() is great when combined with other methods to add dynamics
+
+# Is the phone number american?( check the country code)
+phone = "+1-852-456-1235"
+print(phone.startswith("+1"))
+# Output: True
+
+email = "mehinewe@gmail.com"
+print(email.endswith("gmail.com"))
+# Output: True
+
+file ="data_backup.csv"
+print(file.endswith("csv"))
+# Output: True
+
+# is this a valid email?( check for "@")
+email = "mehinewe@outlook.com"
+print("@" in email)
+# Output: True
+
+
+phone1 = "+48-546-8745"
+phone2 = "48-214-8522"
+phone3 = "0048-524-4565"
+
+print(phone1[phone1.find("-")+1:])
+print(phone2[phone2.find("-")+1:])
+print(phone3[phone3.find("-")+1:])
+
+
+#---------------------------------------------------------
+# validation
+#---------------------------------------------------------
+# isalpha(): check if the string has only letters
+# isnumeric(): check if the string has only numbers
+
+# check if the country name contains only letters
+country = "USA"
+print(country.isalpha())
+# Output: True
+
+country = "USA1"
+print(country.isalpha())
+# Output: False
+
+country = "USA#"
+print(country.isalpha())
+# Output: False
+
+phone = "00485244565"
+print(phone.isnumeric())
+# Output: True
+
+phone = "0048-524-4565"
+print(phone.isnumeric())
+# Output: False
+

@@ -1,0 +1,24 @@
+## 1 
+"""Tasks :
+* Remove extra spaces
+* Convert all emails to lowercase
+* Identify invalid emails:
+must contain exactly one @
+must end with .com
+"""
+
+emails = [
+    "  Alice@gmail.com ",
+     "BOB@Yahoo.COM",
+    "carol123@hotmail.com ",
+    "   david@outlook.com",
+    "eva@@gmail.com"
+    ]
+
+clean_emails = []
+for email in emails:
+     clean_email = email.strip().lower()
+     clean_emails.append(clean_email)
+
+     is_valid = (email.count("@") == 1) and clean_email.endswith(".com")
+     print(clean_email, "is valid:", is_valid)

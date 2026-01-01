@@ -1,0 +1,69 @@
+"""
+A Loop: is a tool that we use to control the flow of the code.
+It allows to repeat a block of code over and over 
+until a condition is met.
+
+We have 2 types of loop: FOR loops and WHILE loops
+
+"""
+# =====================================
+# FOR LOOPS 
+# =====================================
+"""
+The for loop let you go through a group of items 
+one by one to do something for each item
+
+We can use it with sequences : tuple, list, string, range, dict
+"""
+
+# range(stop) or range(start,stop,step)
+for item in range(5):
+        print(f"Round: {item}")
+
+# range(start,stop)
+for item in range(1,6):
+        print(f"Round: {item}")
+
+#range(start,stop,step)
+for item in range(1,10,2):
+        print(f"Round: {item}")
+
+# real world use - Load data, data preparation, data cleaning
+
+# Use Case - we use for loops to go through values and aggregate data
+# like summing, counting, or averaging
+
+scores = [80, 50, 60, 45]
+total = 0
+
+for score in scores:
+        total += score
+        print("Current Total:", total)
+print("Final Total:", total)
+
+# data cleaning
+files = ['  report.cvs', 'DATA.cvs', 'final.TXT']
+
+for file in files:
+        file = file.strip().lower().replace('.txt', '.csv')
+        print(f"Processing {file}")
+
+#-----------
+# CHALLENGE
+#-----------
+"""
+print the 7-times tables from 1 to 10 using a for loop
+"""
+
+numbers = range(1,11)
+
+for number in numbers:
+        print(f"7 * {number} = {7 * number}")
+
+"""
+print a left-aligned pyramid of stars with 6 rows using a for loop
+"""   
+range = range(1,7)
+
+for i in range:
+        print(i * "*")

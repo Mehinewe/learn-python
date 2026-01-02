@@ -1,0 +1,180 @@
+"""
+TYPE
+We have 4 build-in function to check and convert the data type
+- type()                 #build-in function
+- int()                  #build-in function
+- float()                #build-in function
+- complex()              #build-in function
+------------------------------------------------------------------------------
+MATH OPERATORS
++
+-
+*
+/
+//
+%
+**
+------------------------------------------------------------------------------
+ROUNDING
+- abs()                 #build-in function
+- round()               #build-in function
+- ceil()                #math module
+- floor()               #math module
+- trunc()               #math module
+------------------------------------------------------------------------------
+ADVANCED MATH
+sqrt()                  #math module
+sin()                   #math module
+cos()                   #math module
+log()                   #math module
+------------------------------------------------------------------------------
+RANDOM
+To generate random numbers
+- random()              #math module
+- randint()             #math module
+------------------------------------------------------------------------------
+VALIDATION
+- is_integer()              #method
+- isinstance()              #build-in function
+"""
+
+# ============================================================================
+# TYPE
+# Chech the data type
+numbers = [5, 5.7, 2+3j]
+
+for i in numbers:
+    print(type(i))
+
+# Convert the data type
+# int(): converts compatible value into int value
+x = "52"
+print(type(x))
+
+x = int(x)
+print(type(x))
+
+x = 3.14
+print(int(x))
+
+# float(): converts compatible value into float value
+x = 3
+print(float(x))
+
+# complex(): create a complex number using real and imaginary parts
+x = 6       #real
+y = 2       #imaginary
+print(complex(x,y))
+
+
+# -----------------------------------------------------------------------------
+# MATH OPERATORS
+print(5 + 8)
+print(8 - 3)
+print(6 * 3)
+print(7 / 2)        # output: 3.5
+# // floor division : divides two numbers and rounds down
+print(7 // 2)       # output: 3
+# % remainder: the leftover part after division
+# used to check if the number is even
+# output: 0 or 1
+print(7 % 2)       # output: 1
+print(8 % 2)       # output: 0
+# ** exponentiation : it raises a number to the power of another number
+print(2 ** 3)
+
+#SHORTCUTS
+#<operator>= : apply an operator and reassign the result in one step
+x = 2
+# x = x + 5
+x += 5
+print(x)
+x -= 1
+print(x)
+x *= 5
+print(x)
+x /= 2
+print(x)
+
+# -----------------------------------------------------------------------------
+# ROUNDING
+# Mearasure Distance
+print(2 - 10)       #output: -8
+# abs(value): returns absolute value of a number
+print(abs(2 - 10))
+
+import math
+# Rounding Numbers
+# math.floor(): rounds a number down to the floor
+# math.ceil(): rounds a number up to the ceiling
+# round(): rounds a number to the nearest 
+# whole number up or down depending on what's closer
+price = 54.71548
+print(round(price))
+print(round(price, 2))
+print(round(price, 1))
+print(math.floor(price))
+print(math.ceil(price))
+
+# math.trunc(x): cuts off the decimal part and keeps 
+# the whole number(no rounding)
+print(math.trunc(price))
+print(int(price))
+"""
+int() vs trunc()
+if you are not using math already, just use int()
+it's simple and built-in
+
+if you've already imported math, use trunc()
+it makes your intent clearer
+"""
+
+# -----------------------------------------------------------------------------
+# RANDOM
+# random(): returns a random float between 0.0 and 1.0
+import random
+print(random.random())
+
+# randint(start, end): gets a random whole number 
+# from start to end ( both included)
+print(random.randint(1, 8))
+# Use case - Use to generate test data(dummy) for like age,
+# ID or prices
+# random sampling: picking a smaller, random part of a huge dataset
+
+# -----------------------------------------------------------------------------
+# VALIDATION
+# is_integer(): checks if a float has no decimal part(is a whole number)
+x = 8.0
+print(x.is_integer())
+# output: True
+
+x = 8.1
+print(x.is_integer())
+# output: False
+
+# isinstance(value, type): checks if a value belongs to a certain data type
+x = 50
+print(isinstance(x, int))
+# output: True
+
+x = 50.45
+print(isinstance(x, float))
+# output: True
+
+
+#-----------
+# CHALLENGE
+#-----------
+"""
+Generate a random integer between 1 and 100 and 
+chesk if the result is an even number
+"""
+import random
+x = random.randint(1, 100)
+print("Generated number:", x)
+
+if x % 2 == 0:
+    print("The number is even")
+else:
+    print("The number is odd")

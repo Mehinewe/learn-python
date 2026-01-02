@@ -1,0 +1,191 @@
+"""
+Control flow: is the logic you write to control how your code runs
+it is like following traffic lows while driving
+
+There are different ways to control the code flow:
+-------------------------------
+1- CONDITIONAL STATEMENTS : if, else, elif
+-------------------------------
+-------------------------------
+2- LOOPS: 
+Types: for, while
+Control: break, pass, continue
+-------------------------------
+
+We also have BOOLEAN EXPRESSIONS
+Values: True, False
+Functions: bool(), any(), all(), isinstance()
+Comparision operators: ==, !=, <, >, >=, <=
+Logical operator: and, or, not
+Membership Operators: in, not in,
+Identity Operators: is, is not
+"""
+
+#BOOLEAN VALUES & FUNCTIONS
+# bool(): True => if the value is non-empty or non-zero
+# False: => if the value is empty or zero 
+# It is use to check if values are empty or non-empty
+print(True)
+print(False)
+print(type(True))       #<class 'bool'>
+print(bool(123))        #True
+print(bool("Hi"))       #True
+print(bool())           #False
+print(bool(0))          #False
+print(bool(""))         #False
+print(bool(None))       #False
+
+# ANY | ALL | isinstance(value,type)
+email = "" 
+phone = "124-4512-7856"
+username = ""
+# Allows registration
+# if any field is filled
+print(any([email, phone, username]))
+#Output: True
+
+# Allows registration
+# only if all field is filled
+print(all([email, phone, username]))
+#Output: False
+
+print(isinstance(152, int))         #True
+print(isinstance(True, str))        #False
+
+print("Hello".endswith("o"))        #True
+print("Hello".startswith("o"))      #False
+
+# ----------------------------------------------------------------------------
+# COMPARISION OPERATORS : It compares two values and return 
+# True or False based on the result.
+print(10 == 10)             #True
+print(10 != 10)             #False
+print(7 > 3)                #True
+print(7 >= 3)               #True
+print(3 < 7)                #True
+print(3 <= 7)               #True
+
+# Strings can be compared Too (alphabetically)
+print("a" < "b")             #True
+print("a" == "A")            #False
+
+# Chained Comparison: check multiple conditions in one line
+print(1 < 5 < 8)             #True
+print(10 < 5 < 8)            #False
+# Is age between 18 and 30?
+age = 20
+print(18 <= age <= 30)       #True
+
+
+# ----------------------------------------------------------------------------
+# LOGICAL OPERATORS: AND | OR | NOT
+# Used to combine multiple boolean expressions
+print(3 > 1 and 5 < 1)          #False
+print(3 > 1 and 5 > 1)          #True
+
+print(3 > 1 or 5 < 1)          #True
+print(3 > 1 or 5 > 1)          #True
+print(3 < 1 or 5 < 1)          #False
+
+# checks if the system is under pressure
+cpu_usage = 70
+memory_usage = 95
+print(cpu_usage > 90 or memory_usage > 90)
+
+# checks user credentials before login
+email = True
+password = False
+print(email and password)
+
+# not: Reverses True <-> False
+print(not 3 > 2)
+print(not True)
+print(not False)
+
+# use parenthesis to prioritize operators
+# TASK
+"""
+Allow access only if the user is logged in 
+or they are guest 
+but they must not be banned
+"""
+
+is_logged_in = True
+is_guest = False
+is_banned = True
+print((is_logged_in or is_guest) and not is_banned)
+
+
+#-----------
+# CHALLENGE
+#-----------
+"""
+1- Check if a user's name is not empty and the age is greater than or equal to 18
+2- Check if the password is at least 8 characters long and does not contain spaces
+3- Check if a user's email is not empty, contains '@' and ends with '.com'
+4- Check if the username is a string, is not None, and is longer than 5 characters
+5- Check if the user is either an admin or a moderator, 
+and either they're not banned or they've verified their email
+"""
+# 1- Check if a user's name is not empty and the age is greater than or equal to 18
+import random
+username = None
+age = random.randint(15, 20)
+print(age)
+print(username != None and age >= 18)
+
+# 2- Check if the password is at least 8 characters long and does not contain spaces
+password = "nsckdgszg44286"
+print(len(password) >= 8 and password == password.strip() )
+
+# 3- Check if a user's email is not empty, contains '@' and ends with '.com'
+email = "python@gmail.com"
+print(email != None and  email.count("@") == 1 and email.endswith(".com"))
+
+# 4- Check if the username is a string, is not None, and is longer than 5 characters
+username = "Mehinewe"
+print(isinstance(username, str) and not username == None and len(username) > 5)
+
+# 5- Check if the user is either an admin or a moderator, 
+# and either they're not banned or they've verified their email
+is_admin = True
+is_moderator = False
+is_banned = False
+verified_email = False
+print((is_admin or is_moderator) and (not is_banned or verified_email) )
+
+# ----------------------------------------------------------------------------
+# MEMBERSHIP OPERATORS: IN | NOT IN
+# in: checks if a value is inside another value like a string, list or other sequence
+print("o" in "python")      #True
+print(3 not in [1, 2, 3])   #False
+
+#TASK
+# Security check: ensure the domain is not banned
+domain = "gmail.com"
+banned_domains = ["spam.com", "fake.org", "bot.net"]
+print(domain not in banned_domains)      #True
+domain = "spam.com"
+print(domain not in banned_domains)      #False
+
+
+# ----------------------------------------------------------------------------
+# IDENTITY OPERATORS: IS | IS NOT
+# is: Checks iftwo variables refer to the same object in memory
+x = ['a', 'b', 'c']
+y = ['a', 'b', 'c']
+print(x == y)       #True
+print(x is y)       #False
+
+x = 10
+y = 10
+print(x == y)       #True
+print(x is y)       #True
+
+# Make suer email exists, and it is not empty
+email = ""
+print(eemail is not None and mail != "")
+
+
+
+

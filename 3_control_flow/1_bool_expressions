@@ -184,7 +184,7 @@ print(x is y)       #True
 
 # Make suer email exists, and it is not empty
 email = ""
-print(eemail is not None and mail != "")
+print(email is not None and email != "")
 
 
 
